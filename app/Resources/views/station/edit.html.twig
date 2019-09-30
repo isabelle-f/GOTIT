@@ -13,7 +13,7 @@
 
 {% block body %}
     {{ parent() }}
-          
+            
     <!-- Definition of Modal (s): myModalCommune: Common form for the dynamic addition of a new  Municipality -->
     <div id="myModalCommune" class="modal" role="dialog">
     <div class="modal-dialog">
@@ -66,8 +66,8 @@
 
 <script type="text/javascript">  
 
-{% if edit_form.paysFk.vars.data.id is defined %}
-    {% set paysId = edit_form.paysFk.vars.data.id %}
+{% if edit_form.vars.data.paysFk.id is defined %}
+    {% set paysId = edit_form.vars.data.paysFk.id %}
 {% else %}  
     {% set paysId = 0 %}
 {% endif %}
@@ -93,8 +93,8 @@
 
         // specific features: automatically assigns the id of the selected country
         var paysId = {{paysId}};
-        
-        // specific features: automatically assigns the id of the selected country         
+        $('#myModalCommune').find('#bbees_e3sbundle_commune_paysFk').val(paysId);       
+        // specific features: automatically assigns the id of the selected country if a new contry is selected     
         $('#bbees_e3sbundle_station_paysFk').change(function (e) { 
             if (nbSelectPays == 0 ) { //  memorisation  de la liste des communes 
                 $listeOptionCommune =  $('select#bbees_e3sbundle_station_communeFk').find('option');
@@ -121,12 +121,12 @@
             $('select#bbees_e3sbundle_station_communeFk').append(newlisteCommune);
         })
         
-        // Common Modal Management Add the "Add new Common" button
-        // 1) Addition of the "Add new Commune" button
+        // Common Modal Management Add the "Add new Municipality" button
+        // 1) Addition of the "Add new Municipality" button
         var $container = $('select[id="bbees_e3sbundle_station_communeFk"]');
         var $addBoutonAdd = $('<div><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModalCommune">{{'buton.Add a new Commune'|trans}}</button></div></br>');
         $addBoutonAdd.insertBefore($container);
-        // 2) Actions of the modal myModalCommune; (i) capitalization of the commonname and regionName fields (ii) automatic generation of the common code
+        // 2) Actions of the modal myModalCommune; (i) capitalization of the municipality name and region Name fields (ii) automatic generation of the common code
         $('#myModalCommune').on('show.bs.modal', function (e) {
             var modal = $(this);
             $('#bbees_e3sbundle_commune_paysFk').attr("disabled", true); 

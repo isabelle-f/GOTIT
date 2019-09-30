@@ -202,7 +202,7 @@ class CommuneController extends Controller
                 $response->headers->set('Content-Type', 'application/json');
                 return $response;
             } else {
-                var_dump("l appel a la fonction newmodalAction du controller CommuneController n est pas de type XmlHttpRequest"); exit;
+                var_dump("call to the function newmodalAction of controller CommuneController is not like a XmlHttpRequest"); exit;
             }
         }
 
