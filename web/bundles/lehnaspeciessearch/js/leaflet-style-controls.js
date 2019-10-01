@@ -22,11 +22,7 @@
 L.Control.StyleControl = L.Control.extend({
   onAdd: function (map) {
     let control = L.DomUtil.create("div", "leaflet-control-collapse leaflet-control-layers leaflet-control")
-<<<<<<< HEAD
-    let icon = L.DomUtil.create("i", "fa fa-cog fa-2x", control)
-=======
     let icon = L.DomUtil.create("i", "fas fa-cog fa-2x", control)
->>>>>>> d834424eb50ba7ef1033879c2f4042e1430b5e7a
     let panel = L.DomUtil.create("div", "map-control-bar leaflet-control-layers-list", control)
     L.DomEvent.disableClickPropagation(panel);
     // Radius slider

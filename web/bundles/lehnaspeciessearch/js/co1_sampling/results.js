@@ -61,21 +61,13 @@ function initDataTable(tableId, drawCallback) {
               render: renderNumber,
               defaultContent: ""
             }, {
-<<<<<<< HEAD
-              title: "<i class='fa fa-map-marker' style='margin-left:7px'></i>",
-=======
               title: "<i class='fas fa-map-marker' style='margin-left:7px'></i>",
->>>>>>> d834424eb50ba7ef1033879c2f4042e1430b5e7a
               data: "id",
               orderable: false,
               render: (data, type, row) =>
                 Mustache.render($("#details-form-template").html(), row)
             }, {
-<<<<<<< HEAD
-              title: "<i class='fa fa-download' style='margin-left:7px'></i>",
-=======
               title: "<i class='fas fa-download' style='margin-left:7px'></i>",
->>>>>>> d834424eb50ba7ef1033879c2f4042e1430b5e7a
               orderable: false,
               data: "id",
               render: (data, type, row) =>
