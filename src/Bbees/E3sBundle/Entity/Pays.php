@@ -81,12 +81,6 @@ class Pays
     private $userMaj;
 
     /**
-     * @ORM\OneToMany(targetEntity="Commune", mappedBy="paysFk")
-     */
-    private $communes;
-
-
-    /**
      * Get id
      *
      * @return integer

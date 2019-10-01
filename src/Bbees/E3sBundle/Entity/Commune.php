@@ -90,7 +90,7 @@ class Commune
     /**
      * @var \Pays
      *
-     * @ORM\ManyToOne(targetEntity="Pays", inversedBy="communes")
+     * @ORM\ManyToOne(targetEntity="Pays")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="pays_fk", referencedColumnName="id", nullable=false)
      * })
