@@ -70,8 +70,13 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a href="{{ path('default_index') }}"><i class="fas fa-home"></i> {{'title.Dashboard'|trans}} </a></li>
-                  <li><a><i class="fas fas fa-edit"></i>{{'title.Terrain'|trans}}<span class="fas fas fa-chevron-down"></span></a>
+                  <li>
+                      <a href="{{ path('default_index') }}">
+                          <i class="fas fa-home"></i> 
+                          {{'title.Dashboard'|trans}} 
+                      </a>
+                  </li>
+                  <li><a><i class="fas fa-edit"></i>{{'title.Terrain'|trans}}<span class="fas fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="{{ path('station_index') }}">{{'title.station'|trans}}</a></li>
                       <li><a href="{{ path('collecte_index') }}">{{'title.collecte'|trans}}</a></li>
@@ -356,7 +361,7 @@
         {% block footer %}
         <footer>
           <div class="pull-right">
-             © <a href="http://bbees.mnhn.fr">BBEES</a> 2019 - GOTIT1.1.1 -  <a href="{{ asset(['doc/legal_notices_', app.request.getLocale(), '.pdf']|join) }}" target="_blank">{{'legales_mentions'|trans}}</a>
+             © <a href="http://bbees.mnhn.fr">BBEES</a> 2019 - GOTIT1.1.2 -  <a href="{{ asset(['doc/legal_notices_', app.request.getLocale(), '.pdf']|join) }}" target="_blank">{{'legales_mentions'|trans}}</a>
           </div>
           <div class="clearfix"></div>
         </footer>
