@@ -80,6 +80,10 @@ class Pays
      */
     private $userMaj;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Commune", mappedBy="paysFk")
+     */
+    private $communes;
 
 
     /**
@@ -235,4 +239,15 @@ class Pays
     {
         return $this->userMaj;
     }
+
+    /**
+     * Get municipalities list
+     *
+     * @return array
+     */
+    public function getCommunes()
+    {
+        return $this->communes;
+    }
+
 }
